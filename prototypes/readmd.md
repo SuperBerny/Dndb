@@ -1,0 +1,1 @@
+HTML prototypes placed here to later be refactored for handlebars
