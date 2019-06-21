@@ -28,6 +28,24 @@ router.get('/admin/add-spell', (req, res, next) => {
    });
 });
 
+//// Add-Class '/admin/add-class'
+router.get('/admin/add-class', (req, res, next) => {
+   res.render('admin/add-class', {
+      layout: 'admin',
+      path: '/admin/add-class',
+      pageTitle: 'Add Class Info'
+   });
+});
+
+//// Add-Race '/admin/add-race'
+router.get('/admin/add-race', (req, res, next) => {
+   res.render('admin/add-class', {
+      layout: 'admin',
+      path: '/admin/add-class',
+      pageTitle: 'Add Class Info'
+   });
+});
+
 
 // Export Routes
 module.exports = router;
