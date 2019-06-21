@@ -7,8 +7,9 @@ const express = require('express');
 // Router
 const router = express.Router();
 
+//Routes
 
-// '/' route for Main Page
+//// Main Page '/'
 router.get('/', (req, res, next) => {
    res.render('index', {
       path: '/',
@@ -16,4 +17,6 @@ router.get('/', (req, res, next) => {
    });
 });
 
+
+// Export Routes
 module.exports = router;

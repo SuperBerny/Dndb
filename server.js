@@ -8,7 +8,7 @@ const expressHbs = require('express-handlebars');
 
 // Import Routes
 const mainRoutes = require('./routes/main');
-
+const adminRoutes = require('./routes/admin');
 // Create Express Instance
 const app = express();
 
@@ -16,8 +16,9 @@ const app = express();
 app.engine(
   'handlebars',
   expressHbs({
+    defaultLayout: 'main',
     layoutDir: 'views/layouts/',
-    defaultLayout: 'main'
+    partialDir: 'views/partials/'
   })
 );
 
@@ -28,12 +29,14 @@ app.set('views', 'views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Handle Routes
-//////////////////////////////
 
-// Main Route
+//// Main Route
 app.use(mainRoutes);
 
-// Handle 404
+//// Admin Routes
+app.use(adminRoutes);
+
+//// 404
 app.use((req, res, next) => {
   res.status(404).render('404', {pageTitle: 'Page Not Found'});
 });

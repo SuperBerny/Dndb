@@ -7,8 +7,18 @@
    <title>{{ pageTitle }}</title>
 </head>
 <body>
+   <header class="main-header">
+      <nav class="main-header__hav">
+         <ul class="main-header__item-list">
+            <li class="main-header__item"><a href="/">Main</a></li>
+            <li class="main-header__item"><a href="/foo">Admin</a></li>
+         </ul>
+      </nav>
+   </header>
 
       {{{ body }}}
+
+      {{!-- {{> search}} --}}
    
 </body>
 </html>
