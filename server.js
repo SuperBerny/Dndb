@@ -12,7 +12,7 @@ const adminRoutes = require('./routes/admin');
 // Create Express Instance
 const app = express();
 
-//Setting Template Engine to Express-Handlebars
+// Setting Template Engine to Express-Handlebars
 app.engine(
   'handlebars',
   expressHbs({
