@@ -1,0 +1,8 @@
+router.get('/path to page', (req, res, next) => {
+   res.render('path to file', {
+      layout: 'looks in layouts dir',
+      path: '/path to page',
+      pageTitle: 'added to <title> {{ pageTitle }} <title>'
+   });
+});
+
