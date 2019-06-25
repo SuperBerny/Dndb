@@ -17,8 +17,8 @@ app.engine(
   'handlebars',
   expressHbs({
     defaultLayout: 'main',
-    layoutDir: 'views/layouts/',
-    partialDir: 'views/partials/'
+    layoutDir: 'views/layouts',
+    partialDir: 'views/partials'
   })
 );
 
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Handle Routes
 
-//// Main Route
+//// Main Routes
 app.use(mainRoutes);
 
 //// Admin Routes
