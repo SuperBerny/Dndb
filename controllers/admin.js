@@ -29,9 +29,11 @@ exports.getAddRace = (req, res, next) => {
 
 //// Admin Add Spell
 exports.getAddSpell = (req, res, next) => {
+    const Component = false;
    res.render('admin/add-spell', {
       layout: 'admin',
       path: '/admin/add-spell',
-      pageTitle: 'Add Spell Info'
+      pageTitle: 'Add Spell Info',
+      ifComponent: false,
    });
 };
