@@ -1,1 +1,60 @@
-{{> admin/add-spell}}
+<h2>Add a Spell</h2>
+
+<main class="spell-main">
+   <form action="/admin/add-spell" class="add-spell" method="POST">
+      <div class="form-control">
+         <label for="spell-name">Spell Name</label>
+         <input type="text" name="spell-name" id="spellName">
+
+         <label for="spell-level">Spell Level</label>
+         <select name="spell-level" id="spell_level">
+            <option value="cantrip">Cantrip</option>
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+            <option value="5th">5th</option>
+            <option value="6th">6th</option>
+            <option value="7th">7th</option>
+            <option value="8th">8th</option>
+            <option value="9th">9th</option>
+            <option value="10th">10th</option>
+         </select>
+
+         <label for="spell-school">Spell School</label>
+         <select name="spell-school" id="spellSchool">
+            <option value="Abjuration">Abjuration</option>
+            <option value="Conjuration">Conjuration</option>
+            <option value="Divination">Divination</option>
+            <option value="Enchantment">Enchantment</option>
+            <option value="Evocation">Evocation</option>
+            <option value="Illusion">Illusion</option>
+            <option value="Necromanyc">Necromancy</option>
+            <option value="Transmutation">Transmutation</option>
+         </select>
+
+         <label for="casting-time">Casting Time</label>
+         <input type="text" name="casting-time" id="castingTime">
+
+         <label for="spell-range">Spell Range</label>
+         <input type="text" name="spell-range" id="spellRange">
+
+         <label for="spell-components">Spell Components</label>
+         <select name="spell-components" id="spellComponents">
+            <option value="V">V</option>
+            <option value="S">S</option>
+            <option value="M" id="spellMaterial">M</option>
+         </select>
+         {{#if}}
+         <input type="text" placeholder="add material compontnent">
+         {{/if}}
+
+      </div>
+   </form>
+</main>
+
+<script>
+
+
+
+</script>
