@@ -1,4 +1,4 @@
-router.get('/path to page', (req, res, next) => {
+router.get('/path to view', (req, res, next) => {
    res.render('path to file', {
       layout: 'looks in layouts dir',
       path: '/path to page',

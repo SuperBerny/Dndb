@@ -2,8 +2,8 @@
 
 //// HomePage
 exports.getHomePage = (req, res, next) => {
-   res.render('index', {
-      path: '/',
-      pageTitle: 'Home'
-   });
+  res.render('index', {
+    path: '/',
+    pageTitle: 'Home'
+  });
 };

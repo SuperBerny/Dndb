@@ -18,20 +18,29 @@ app.engine(
   'handlebars',
   expressHbs({
     defaultLayout: 'main',
-    layoutDir: 'views/layouts/',
-    partialDir: 'views/partials/'
+    layoutDir: 'views/layouts',
+    partialDir: 'views/partials'
   })
 );
 
+// Set View Engine
 app.set('view engine', 'handlebars');
 app.set('views', 'views');
 
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Middleware
+
+//// setting app.locals
+app.use((req, res, next) => {
+   app.locals.test = 'I\m alive!';
+   next(); //remember to call next() otherwise server.js stops here
+});
+
 // Handle Routes
 
-//// Main Route
+//// Main Routes
 app.use(mainRoutes);
 
 //// Admin Routes
