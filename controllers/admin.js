@@ -34,6 +34,6 @@ exports.getAddSpell = (req, res, next) => {
       layout: 'admin',
       path: '/admin/add-spell',
       pageTitle: 'Add Spell Info',
-      ifComponent: false,
+      ifComponent: true,
    });
 };
