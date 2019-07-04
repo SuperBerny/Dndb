@@ -45,16 +45,27 @@
             <option value="S">S</option>
             <option value="M" id="spellMaterial">M</option>
          </select>
-         {{#if}}
-         <input type="text" placeholder="add material compontnent">
-         {{/if}}
+         
+         <input type="text" placeholder="add material component">
+
+         <label for="spell-duration">Duration</label>
+         <select name="spell-duration" id="conInst">
+            <option value="Time Limit">Time Limit</option>
+            <option value="Concentration">Concentration</option>
+            <option value="Instantaneous">Instantaneous</option>
+         </select>
+         <input type="text" placeholder="how long does it last">
+
+         <label for="spell-description">Spell Description</label>
+         <textarea name="spell-description" id="spellDescription" cols="30" rows="10"></textarea>
+
 
       </div>
    </form>
 </main>
 
+
 <script>
-
-
+   
 
 </script>

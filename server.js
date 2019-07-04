@@ -29,6 +29,14 @@ app.set('views', 'views');
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Middleware
+
+//// setting app.locals
+app.use((req, res, next) => {
+   app.locals.test = 'I\m alive!';
+   next(); //remember to call next() otherwise server.js stops here
+});
+
 // Handle Routes
 
 //// Main Routes
